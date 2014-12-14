@@ -1,0 +1,23 @@
+angular.module(['appModule.directives'],[])
+.directive('geMaps',function(){
+	return {
+restrict: 'A',
+        replace: true,
+        template: '<div></div>',
+        link: function(scope, element, attrs) {
+            console.log(element);
+            
+            var myOptions = {
+                zoom: 6,
+                center: new google.maps.LatLng(46.87916, -3.32910),
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+             
+            scope.map = new google.maps.Map(document.getElementById(attrs.id), myOptions);
+            
+//end addMarker
+            
+        }
+    };
+});
+	

@@ -1,0 +1,33 @@
+//= require_tree ./services
+//= require_tree ./filters
+//= require_tree ./controllers
+//= require_tree ./directives
+
+var appModule;
+
+appModule = angular.module('appModule',[
+	'ngRoute',
+	'appModule.controllers',
+	'appModule.directives'
+	]);
+
+appModule.config([
+    '$routeProvider', function($routeProvider) {
+      $routeProvider.when('/stocks', {
+        templateUrl: "<%= asset_path('mainIndex.html') %>",
+        controller: 'IndexCtrl'
+      })
+
+      $routeProvider.when('/tweets', {
+        templateUrl: "<%= asset_path('tweets.html') %>",
+        controller: 'TweetsCtrl'
+      })
+      .otherwise({
+        templateUrl: "<%= asset_path('mainPost.html') %>",
+        controller: 'PostCtrl'
+      });
+    }
+  ]);
+
+
+

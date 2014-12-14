@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app="appModule" >
+<head>
+  <title>Tweetbroker</title>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application", 
+  "https://maps.googleapis.com/maps/api/js?key=AIzaSyD91edwQlGAMug9c4HdI_qx9cBc9_fpd6A", 
+  controller_name %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

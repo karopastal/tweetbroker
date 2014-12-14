@@ -1,0 +1,41 @@
+<div id="container1"> 
+
+<style>
+table,th,td
+{
+border-spacing: 10px;
+}
+</style>
+
+
+<table>
+	<tr>
+		<td>
+			<input type="text" placeholder="Search" span="5"  id="color1" ng-model="symbol">
+			&nbsp;
+			&nbsp;
+		</td>
+		<td>
+		<input type="Date" placeholder="Search" span="4"  id="color1" ng-model="tweets_from">
+		
+		    -
+		
+    	<input type="Date" placeholder="Search" span="4"  id="color1" ng-model="tweets_to">
+		</td>
+		<td>
+		&nbsp;
+			<button ng-click="gochart(0,tweets_from,tweets_to)" class="btn btn-info btn-large">go chart</button>&nbsp;
+		</td>
+	</tr>
+</table>
+<table><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;</td></tr></table>
+<table>
+		<tr>
+		<td>
+			<!-- <div id="chartContainer">FusionCharts XT will load here!</div> -->
+			<div id="chart-container">FusionCharts will render here</div>
+		</td>
+	</tr>
+</table>
+
+<div>
